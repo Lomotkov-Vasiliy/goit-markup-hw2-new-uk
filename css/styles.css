@@ -1,25 +1,31 @@
 /* Палітра */
-/* Колір основного тексту #212121 */
-/* Другорядний колір тексту #757575 */
+/* Колір основного тексту #2E2F42 */
+/* Другорядний колір тексту #434455 */
 /* Білий #FFFFFF */
-/* Акент #2196F3 */
-/* Другорядний колір фону #2F303A */
+/* Акент #4D5AE5 */
+/* Колір фільтру кнопок #F4F4FD */
+/* Колір фільтру кнопок при ховері/фокусі #404BBF */
+/* Другорядний колір фону #2E2F42 */  
+/* Інший другорядений колір 2  #E7E9FC; */
+/* Основний колір фону #FFFFFF */
 
 :root {
-    --primery-text-color: #212121;
-    --second-text-color: #757575;
-    --accent-color: #2196F3;
+    --primery-text-color: #2E2F42;
+    --second-text-color: #434455;
+    --accent-color: #4D5AE5;
     --white-color: #FFFFFF;
-    --color-button-filter: #F5F4FA;
-    --logo-color: #000000;
-    --background-other-color: #2F303A;
+    --color-button-filter: #F4F4FD;
+    --color-button-filter-hover: #404BBF;
+    --background-other-color: #2E2F42;
+    --background-other-color-2: #E7E9FC;
+    --main-background-color: #FFFFFF;
 }
 
 body {
     color: var(--primery-text-color);
-    background-color: #ffffff;
+    background-color: var(--main-background-color);
     font-family: Roboto; sans-serif;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.02em;
 }
 
 .list {
@@ -32,34 +38,44 @@ body {
 }
 
 /* ----------------<header></header>---------------- */
-.header-link {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.33;
-    letter-spacing: 0.02em;
-}
+
 .text-logo-accent {
     font-family: Raleway, sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: 0.03em;
     color: var(--accent-color);
+    text-transform: uppercase;
 }
+
 .logo-header {
-    color: var(--logo-color);
+    color: var(--primery-text-color);
 }
 
 /* nav */
 .accent {
     color: var(--accent-color);
 }
+.site-nav a{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
 .site-nav a:hover, .site-nav a:focus {
     color: var(--accent-color);
 }
-.auth-nav a{
+
+
+.auth-nav a {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
     color: var(--second-text-color);
 }
-.auth-nav a:hover, .auth-nav a:focus {
+.auth-nav a:hover,
+.auth-nav a:focus {
     color: var(--accent-color);
 }
 
@@ -75,8 +91,11 @@ body {
     font-size: 44px;
     line-height: 1.36;
     letter-spacing: 0.06em;
-    text-transform: uppercase;
+    text-transform:capitalize ;
     text-align: center;
+}
+.other {
+    text-transform: lowercase;
 }
 
 /* button */
@@ -85,6 +104,7 @@ body {
 }
 .button {
     font-family: inherit;
+    text-transform: capitalize;
     cursor: pointer;
     color: var(--white-color);
     background-color: var(--accent-color);
@@ -93,42 +113,51 @@ body {
     line-height: 1.87;
     letter-spacing: 0.06em;
 }
+.button:hover,
+.button:focus {
+    background-color: var(--color-button-filter-hover);
+}
 
 /* -------------------section benefits-------------------- */
 
 .benefits {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
 }
 
 .desc-benefits {
     color: var(--second-text-color);
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 .employment, 
 .our-team {
     font-weight: 700;
     font-size: 36px;
-    line-height: 1.17;
+    line-height: 1.11;
     text-align: center;
+    text-transform: capitalize;
 }
 
 /* -------------------team-------------- */
+
+.team {
+    background-color: var(--background-other-color-2);
+}
+
 .developers-name {
     font-weight: 500;
-    font-size: 16px;
-    line-height: 1.19;
+    font-size: 20px;
+    line-height: 1.2;
 }
 .profession {
     color: var(--second-text-color);
     font-weight: 400;
     font-size: 16px;
-    line-height: 1.9;
+    line-height: 1.5;
 }
 
 /* ---------------------------footer------------------------- */
@@ -136,24 +165,24 @@ body {
     background-color: var(--background-other-color);
 }
 .logo-footer {
-    color: var(--white-color);
+    color: #F4F4FD;
 }
 
-.address {
+.footer-text {
+    font-family: 'Roboto', sans-serif;
+    color: var(--background-other-color-2);
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-    color: var(--white-color);
-}
-.footer-contact {
-    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    line-height: 1.5;    
 }
 
 /* **************new page portfolio, maine  **************** */
 
 .button-filter {
     background-color: var(--color-button-filter);
+    color: var(--accent-color);
     cursor: pointer;
+    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
@@ -162,23 +191,25 @@ body {
 }
 .button-filter:hover, .button-filter:focus {
     color: var(--white-color);
-    background-color: var(--accent-color);
+    background-color: var(--color-button-filter-hover);
 }
 
 /* -------------section project-------------- */
+.text-project {
+    text-transform: capitalize;
+}
 
 .project {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
 }
 
 .text-portfolio {
     color: var(--second-text-color);
     font-weight: 400;
     font-size: 16px;
-    line-height: 1.87;
+    line-height: 1.5;
 }
 
 
